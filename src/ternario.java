@@ -100,7 +100,12 @@ public class ternario {
         Runnable taskTernary = (isTaskA) ? () -> System.out.println("Task A") : () -> System.out.println("Task B");
         taskTernary.run();
 
-        // 6. Determinar o maior valor entre a, b e c e retornar uma string
+        // 6. Se o operador ternário se tornar muito complexo, considere usar um if-else para melhorar a legibilidade.
+
+        // Complexo e difícil de ler:
+        String resultStringTernary = (a > b) ? ((a > c) ? "A" : "C") : ((b > c) ? "B" : "C");
+        System.out.println(resultStringTernary);
+        
         String resultString3;
 
         // Usando if-else para determinar o maior valor e retornar uma string
@@ -119,11 +124,8 @@ public class ternario {
         }
         System.out.println(resultString3);
 
-        // Usando o operador ternário para simplificar
-        String resultStringTernary = (a > b) ? ((a > c) ? "A" : "C") : ((b > c) ? "B" : "C");
-        System.out.println(resultStringTernary);
+        // 7. O operador ternário pode ser útil para retornar valores baseados em enums.
 
-        // 7. Retornar uma string com base no status
         Status status = Status.ACTIVE; // Status atual
         String resultStatus;
 
@@ -154,7 +156,12 @@ public class ternario {
         int expensiveResultTernary = (condition) ? expensiveCalculation() : 0;
         System.out.println(expensiveResultTernary);
 
-        // 9. Retornar um valor padrão se a entrada for nula
+        condition = true; // Alterando a condição para true
+        int expensiveResultTernary2 = (condition) ? expensiveCalculation() : 0;
+        System.out.println(expensiveResultTernary2); // Volta 42 pois essa variável "condition" está true
+
+        // 9. O operador ternário pode ser usado para verificar valores nulos de forma concisa.
+
         String resultDefault;
 
         // Usando if-else para verificar se a entrada é nula
@@ -169,7 +176,8 @@ public class ternario {
         String resultDefaultTernary = (input != null) ? input : "Default Value";
         System.out.println(resultDefaultTernary);
 
-        // 10. Mapear uma lista de strings com base em uma condição
+        // 10. Você pode usar operadores ternários dentro de expressões lambda em streams.
+
         List<String> list = List.of("Java", "", "Paga", "", "Meus", "", "Boletos"); // Lista de strings
         List<String> results = list.stream()
             .map(item -> {
@@ -188,7 +196,8 @@ public class ternario {
             .collect(Collectors.toList());
         System.out.println(resultsTernary);
 
-        // 11. Comparar a soma de dois valores com um terceiro valor e retornar o maior dos dois primeiros
+        // 11. O operador ternário tem menor precedência do que a maioria dos operadores aritméticos e lógicos. Use parênteses para evitar ambiguidades.
+
         int resultCompare;
 
         // Usando if-else para comparar a soma
@@ -199,11 +208,13 @@ public class ternario {
         }
         System.out.println(resultCompare);
 
-        // Usando o operador ternário para simplificar
-        int resultCompareTernary = (a + b > c) ? a : b;
-        System.out.println(resultCompareTernary);
+        int resultCompareTernary1 = a + b > c ? a : b; // Evite usar sem parênteses.
+        System.out.println(resultCompareTernary1);
+        int resultCompareTernary2 = (a + b > c) ? a : b; // Use parênteses para evitar ambiguidades.
+        System.out.println(resultCompareTernary2);
 
-        // 12. Retornar um valor inteiro ou null com base em uma condição
+        // 12. O operador ternário pode causar autoboxing/desboxing dependendo dos tipos envolvidos.
+
         Integer resultNullable;
 
         // Usando if-else para retornar um valor ou null
@@ -215,7 +226,7 @@ public class ternario {
         System.out.println(resultNullable);
 
         // Usando o operador ternário para simplificar
-        Integer resultNullableTernary = (condition) ? 1 : null;
+        Integer resultNullableTernary = (condition) ? 1 : null; // Autoboxing ocorre aqui.
         System.out.println(resultNullableTernary);
 
         // 13. Atribuir um valor final com base em uma condição
