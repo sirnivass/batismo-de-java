@@ -8,6 +8,8 @@ public class ternario {
          * O operador ternário é uma forma concisa de escrever expressões condicionais.
          * Ele segue a sintaxe: condição ? valor_se_verdadeiro : valor_se_falso;
          * Cada exemplo abaixo demonstra como simplificar o código usando o operador ternário.
+         * Minha sugestão, analise exemplo a exemplo. Para ficar mais fácil de ler a saída, apague os exemplos que não deseja ver.
+         * estou a disposição para qualquer dúvida.
         */
 
         // 1. Encontrar o maior valor entre a, b e c
@@ -229,7 +231,8 @@ public class ternario {
         Integer resultNullableTernary = (condition) ? 1 : null; // Autoboxing ocorre aqui.
         System.out.println(resultNullableTernary);
 
-        // 13. Atribuir um valor final com base em uma condição
+        // 13. O operador ternário pode ser usado para inicializar variáveis finais.
+
         final int finalValue;
 
         // Usando if-else para atribuir o valor final
