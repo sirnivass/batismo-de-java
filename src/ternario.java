@@ -215,8 +215,19 @@ public class ternario {
         int resultCompareTernary2 = (a + b > c) ? a : b; // Use parênteses para evitar ambiguidades.
         System.out.println(resultCompareTernary2);
 
+        /*
+         * DISCLAIMER:
+         * Autoboxing e Unboxing
+         * 
+         * Autoboxing: É o processo automático de conversão de um tipo primitivo (int, double, etc.) 
+         * para o seu tipo wrapper correspondente (Integer, Double, etc.). 
+         * No exemplo, o valor 1 (primitivo) é convertido para um objeto do tipo Integer.
+         * 
+         * Unboxing: É o processo inverso, onde um objeto wrapper é convertido de volta para o tipo primitivo.
+         */
+        
         // 12. O operador ternário pode causar autoboxing/desboxing dependendo dos tipos envolvidos.
-
+        
         Integer resultNullable;
 
         // Usando if-else para retornar um valor ou null
